@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+/* Contenedor principal */
+.main-container {
+    margin-left: 250px; 
+    width: calc(100% - 250px);
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+/* Tabla con texto más grande */
+.compact-table {
+    font-size: 0.95rem;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.compact-table .table {
+    width: 100%;
+    margin-left: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.compact-table .table th, 
+.compact-table .table td {
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #dee2e6;
+}
+
+.compact-table .table thead th {
+    background-color: #f1f3f5;
+    font-weight: 600;
+    font-size: 1.05rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Efecto hover para filas */
+.compact-table .table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Botones */
+.btn-sm-compact {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.95rem;
+    margin: 0 2px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .main-container {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 0.75rem;
+    }
+    
+    /* Ajustar tamaño de fuente en móviles */
+    .compact-table {
+        font-size: 0.85rem;
+    }
+    
+    .compact-table .table thead th {
+        font-size: 0.9rem;
+    }
+    
+    /* Mejorar visualización de botones en móviles */
+    .btn-sm-compact {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Ajustar el contenedor de botones */
+    .d-flex.gap-2 {
+        flex-wrap: wrap;
+        gap: 4px !important;
+    }
+}
+
+/* Efectos visuales adicionales */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}

@@ -1,0 +1,203 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #2C3E50;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+.content {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: nowrap; /* Esto asegura que los elementos estén en una fila */
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.video-container, .clock-container, #map-container {
+    flex-basis: 30%; /* Asegura que los elementos se distribuyan en 3 partes iguales */
+    min-width: 300px; /* Evita que los elementos se achiquen demasiado */
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+}
+
+.section-container {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ecf0f1;
+    margin-bottom: 30px;
+}
+
+#camara {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.clock-container {
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #2C3E50;
+    color: #ecf0f1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#map-container {
+    position: relative;
+    border-radius: 10px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.action-buttons button {
+    margin: 10px;
+    font-size: 16px;
+}
+
+.action-buttons button:hover {
+    background-color: #16a085;
+}
+
+.alert {
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
+
+.success {
+    color: #2ecc71;
+}
+
+
+
+/* ... tus estilos actuales arriba ... */
+
+/* Modificaciones para mejorar la visualización en móviles */
+@media screen and (max-width: 768px) {
+    body {
+        height: auto; /* Cambia de 100vh a auto para permitir scroll */
+        min-height: 100vh; /* Asegura que ocupe al menos toda la pantalla */
+        padding: 20px 0; /* Añade espacio arriba y abajo */
+        align-items: flex-start; /* Alinea el contenido al inicio */
+    }
+
+    .content {
+        margin: 20px 0; /* Añade margen vertical */
+        padding: 15px; /* Reduce el padding interno */
+    }
+
+    .container {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        align-items: center; /* Centra los elementos */
+        margin-top: 20px; /* Reduce el margen superior */
+    }
+
+    .video-container, .clock-container, #map-container {
+        flex-basis: auto; /* Elimina el tamaño fijo */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        min-width: unset; /* Elimina el mínimo ancho */
+        height: 250px; /* Reduce la altura para pantallas pequeñas */
+        margin-bottom: 15px; /* Espacio entre elementos */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+        margin-bottom: 20px; /* Reduce el margen inferior */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del subtítulo */
+    }
+
+    button {
+        margin-top: 20px; /* Reduce el margen superior */
+        padding: 12px 25px; /* Ajusta el padding */
+        font-size: 16px; /* Reduce el tamaño de fuente */
+    }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .video-container, .clock-container, #map-container {
+        height: 200px; /* Altura aún más reducida */
+    }
+
+    .clock-container {
+        font-size: 30px; /* Reduce el tamaño del reloj */
+    }
+}

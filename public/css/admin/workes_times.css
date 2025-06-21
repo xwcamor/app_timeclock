@@ -1,0 +1,93 @@
+/* Estilos generales */
+body {
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+/* Contenedor principal */
+.main-container {
+    margin-left: 250px; 
+    width: calc(100% - 250px);
+    padding: 1rem;
+    transition: all 0.3s;
+}
+
+/* Tabla con texto más grande */
+.compact-table {
+    font-size: 0.95rem;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.compact-table .table {
+    width: 100%;
+    margin-left: 0;
+}
+
+.compact-table .table th, 
+.compact-table .table td {
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.compact-table .table thead th {
+    background-color: #f1f3f5;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* Estado */
+.estado-badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+.estado-activado {
+    background-color: #28a745;
+    color: white;
+}
+
+.estado-desactivado {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Botones */
+.btn-sm-compact {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.95rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .main-container {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 0.75rem;
+    }
+    
+    /* Opcional: ajustar tamaño de fuente en móviles */
+    .compact-table {
+        font-size: 0.85rem;
+    }
+    
+    .compact-table .table thead th {
+        font-size: 0.9rem;
+    }
+    
+    /* Mejorar visualización de botones en móviles */
+    .btn-sm-compact {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    
+    /* Ocultar columnas menos importantes en móviles */
+    .optional-column {
+        display: none;
+    }
+}
+
+
