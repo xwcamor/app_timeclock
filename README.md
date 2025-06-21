@@ -1,2 +1,1 @@
-Application created to control employees
-
+Application created to control employees using facial recognizion
